@@ -37,6 +37,7 @@
 
   --icon-color: #242526;
   --mode-color: #ccc;
+  --card-bg-color: #fff; 
 }
 
 body {
@@ -57,6 +58,7 @@ body.dark {
 
   --icon-color: rgb(0, 160, 193);
   --mode-color: #fff;
+  --card-bg-color: #1a1a1a;
 }
 
 .container {
@@ -942,7 +944,7 @@ footer {
 }
 
 .project-card {
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -988,11 +990,11 @@ footer {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #111;
+  color: var(--text-color);
 }
 
 .project-description {
-  color: #666;
+  color: var(--text-color);
   font-size: 0.9rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
