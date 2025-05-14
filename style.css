@@ -488,40 +488,20 @@ h3 {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.skill-bar .skill-per {
-  position: relative;
+.skill-per {
   display: block;
-  height: 100%;
-  width: 90%;
-  border-radius: 6px;
+  height: 8px;
   background: #8749f2;
-  animation: progress 0.4s ease-in-out forwards;
-  opacity: 0;
+  position: relative;
+  border-radius: 6px;
+  animation: progress 0.8s ease-in-out forwards;
 }
-
-.skill-per.html {
-  width: 80%;
-  animation-delay: 0.1s;
-}
-
-.skill-per.css {
-  width: 70%;
-  animation-delay: 0.1s;
-}
-
-.skill-per.javascript {
-  width: 50%;
-  animation-delay: 0.2s;
-}
-
-.skill-per.Python {
-  width: 70%;
-  animation-delay: 0.3s;
-}
-
-.skill-per.php {
-  width: 30%;
-  animation-delay: 0.3s;
+.skill-bar {
+  height: 8px;
+  width: 100%;
+  background: #ddd;
+  border-radius: 6px;
+  margin: 10px 0 20px;
 }
 
 @keyframes progress {
@@ -552,7 +532,7 @@ h3 {
 .project-container {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -950,4 +930,121 @@ footer {
 .modal-list li {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
+}
+
+/* Projects List Section */
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.watermark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+
+.project-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0099ff;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .project-card {
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .project-card {
+    max-width: 420px;
+  }
+}
+.project-section {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
