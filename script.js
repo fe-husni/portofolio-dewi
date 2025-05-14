@@ -47,6 +47,8 @@ sr.reveal(".project-box", { interval: 200 });
 /* -- HEADINGS -- */
 sr.reveal(".top-header", {});
 
+sr.reveal(".project-card", { interval: 150 });
+
 /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
 /* -- ABOUT INFO & CONTACT INFO -- */
