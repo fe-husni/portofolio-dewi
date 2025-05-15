@@ -1050,3 +1050,21 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.about-me {
+  position: relative;
+  padding-top: 32px; /* supaya teks tidak tertimpa gambar */
+}
+
+.erp-absolute-img {
+  position: absolute;
+  top: -72px;
+  left: 32px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
